@@ -292,7 +292,7 @@ class AdminController extends Controller
             'admin_note'   => request('admin_note'),
         ]);
 
-        return back()->with('success', "Withdrawal of KES " . number_format($withdrawal->amount, 2) . " approved.");
+        return back()->with('success', "Withdrawal of KES " . number_format((float)$withdrawal->amount, 2) . " approved.");
     }
 
     /** POST /admin/withdrawals/{id}/reject */
